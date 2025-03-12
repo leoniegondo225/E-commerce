@@ -1,15 +1,15 @@
 "use client"
 import { FaQuestionCircle, FaCreditCard, FaTruck, FaPencilAlt, FaDollarSign, FaClock, FaUndo } from "react-icons/fa";
-import 'bootstrap/dist/css/bootstrap.min.css';
-import { useEffect } from 'react';
+import "bootstrap/dist/css/bootstrap.min.css";
+import { useEffect } from "react";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 
 
 const FAQPage = () => {
   useEffect(() => {
-    if (typeof window !== 'undefined') {
-      require('bootstrap/dist/js/bootstrap.bundle.min.js');
+    if (typeof window !== "undefined") {
+      require("bootstrap/dist/js/bootstrap.bundle.min.js");
     }
   }, []);
 
@@ -29,7 +29,7 @@ const FAQPage = () => {
           </h2>
           <div id="collapseOne" className="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
             <div className="accordion-body">
-              Vous pouvez commander en ajoutant le produit à votre panier et en procédant au paiement. Suivez les étapes simples à l'écran pour finaliser votre commande en toute sécurité.
+              Vous pouvez commander en ajoutant le produit à votre panier et en procédant au paiement. Suivez les étapes simples à l&#39;écran pour finaliser votre commande en toute sécurité.
             </div>
           </div>
         </div>
@@ -57,7 +57,7 @@ const FAQPage = () => {
           </h2>
           <div id="collapseThree" className="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
             <div className="accordion-body">
-              Après l'expédition de votre commande, vous recevrez un e-mail contenant un numéro de suivi. Vous pourrez l'utiliser pour suivre l'état de la livraison de votre colis.
+              Après l&#39;expédition de votre commande, vous recevrez un e-mail contenant un numéro de suivi. Vous pourrez l&#39;utiliser pour suivre l&#39;état de la livraison de votre colis.
             </div>
           </div>
         </div>
@@ -71,7 +71,7 @@ const FAQPage = () => {
           </h2>
           <div id="collapseFour" className="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
             <div className="accordion-body">
-              Une fois la commande passée, vous pouvez la modifier ou l'annuler dans un délai de 30 minutes. Contactez notre service client pour toute modification urgente.
+              Une fois la commande passée, vous pouvez la modifier ou l&#39;annuler dans un délai de 30 minutes. Contactez notre service client pour toute modification urgente.
             </div>
           </div>
         </div>
@@ -113,7 +113,7 @@ const FAQPage = () => {
           </h2>
           <div id="collapseSeven" className="accordion-collapse collapse" aria-labelledby="headingSeven" data-bs-parent="#faqAccordion">
             <div className="accordion-body">
-              Vous pouvez retourner un produit dans les 14 jours suivant sa réception. Contactez notre service client pour obtenir l'étiquette de retour et suivre la procédure. Le remboursement est effectué sous 7 jours après réception du produit retourné.
+              Vous pouvez retourner un produit dans les 14 jours suivant sa réception. Contactez notre service client pour obtenir l&#39;étiquette de retour et suivre la procédure. Le remboursement est effectué sous 7 jours après réception du produit retourné.
             </div>
           </div>
         </div>

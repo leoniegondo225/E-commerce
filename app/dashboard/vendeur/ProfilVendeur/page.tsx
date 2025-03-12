@@ -1,9 +1,9 @@
-import React from 'react'
-import FormProfilVendeur from './FormProfilVendeur'
+import React from "react"
+import FormProfilVendeur from "./FormProfilVendeur"
 
 function ProfilVendeur() {
   return (
-    <div className='container'>
+    <div className="container">
       <FormProfilVendeur />
     </div>
   )

@@ -27,6 +27,7 @@ export type ProductType = {
   descriptionProduit?: string;
   quantite?: number;
   idproduit?: string;
+  category?:string;
   panier?: ProductType[] | null;
   setPanier?: React.Dispatch<React.SetStateAction<ProductType[]>>
 }

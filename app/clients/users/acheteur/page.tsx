@@ -3,7 +3,7 @@
 import GoogleLogin from "@/components/googleLogin";
 import Link from "next/link";
 import { useRef, useState } from "react"
-import { Toast } from 'primereact/toast';
+import { Toast } from "primereact/toast";
 
 
 function Inscription() {
@@ -77,7 +77,7 @@ const [load, setLoad]= useState(false)
                         <div className="col-lg-7 ">
                             <div>
                                 <h1 className="text-light">Bienvenu dans le monde de la technologie</h1>
-                                <p className="pt-3 text-light">Rejoignez-nous dès aujourd'hui et découvrez une sélection unique d'appareils électroniques dernier cri. Profitez de nos offres exclusives et faites partie d'une communauté de passionnés toujours à la recherche des meilleures innovations technologiques.</p>
+                                <p className="pt-3 text-light">Rejoignez-nous dès aujourd&#39;hui et découvrez une sélection unique d&#39;appareils électroniques dernier cri. Profitez de nos offres exclusives et faites partie d&#39;une communauté de passionnés toujours à la recherche des meilleures innovations technologiques.</p>
                             <button className="btn btn-success">Inscrivez-vous</button>
                             </div>
                         </div>
@@ -145,12 +145,12 @@ const [load, setLoad]= useState(false)
                     !load ? (
                         <div className="mb-3">
                                     <button className="btn btn-primary w-100 text-center col-lg-12" type="submit" >
-                                        S'inscrire
+                                        S&#39;inscrire
                                     </button>
                                 </div>
                     ) : (
                         <div className="col-lg-12 mb-3">
-                            <p className='fw-bold text-center p-2 btn btn-outline-primary form-control h5'>
+                            <p className="fw-bold text-center p-2 btn btn-outline-primary form-control h5">
                                 <i className=" fas fa-spinner fa-spin me-2 "></i>
                                 Veillez patienter quelque instants !</p>
                         </div>

@@ -78,7 +78,7 @@ function Login() {
                             <div className="row">
                                 <div className="d-flex justify-content-between">
                                     <p className="">Déjà un compte?</p>
-                                    <Link href="/clients/users/vendeur" className="fw-bold">S'inscrire</Link>
+                                    <Link href="/clients/users/vendeur" className="fw-bold">S&#39;inscrire</Link>
                                 </div>
                             </div>
 

@@ -37,7 +37,7 @@ const CheckoutPage = () => {
 
   const calculateTotal = () => {
     const subtotal = cartItems.reduce(
-      (acc, item) => acc + (item.price ? item.price * item.quantity : 0),
+      (acc, item) => acc + (item.prix ? item.prix * item.qte! : 0),
       0
     );
     return (subtotal - (subtotal * discount) / 100).toFixed(2);

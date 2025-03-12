@@ -1,18 +1,18 @@
 "use client"
 
-import React, { useState } from 'react'
-import Navbar from '@/components/navbar'
-import Footer from '@/components/footer'
-import { HeroSection } from '@/components/home/heroSection';
-import Delivre from '@/components/home/delivre';
-import ProductList from '@/components/home/produit';
+import React, { useState } from "react"
+import Navbar from "@/components/navbar"
+import Footer from "@/components/footer"
+import { HeroSection } from "@/components/home/heroSection";
+import Delivre from "@/components/home/delivre";
+import ProductList from "@/components/home/produit";
 
-import SellerSection from '@/components/home/vendeur';
-import Soldes from '@/components/home/solde';
-import { ProductType } from '@/type';
+import SellerSection from "@/components/home/vendeur";
+import Soldes from "@/components/home/solde";
+import { ProductType } from "@/type";
 
 
-function page() {
+function Page() {
 
   const [panier, setPanier] = useState<ProductType[]>([])
 
@@ -39,4 +39,4 @@ function page() {
   )
 }
 
-export default page
+export default Page

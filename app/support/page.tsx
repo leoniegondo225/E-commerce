@@ -1,12 +1,12 @@
-import Footer from '@/components/footer';
-import Navbar from '@/components/navbar';
-import { FaEnvelope, FaPhoneAlt, FaHeadset } from 'react-icons/fa';
+import Footer from "@/components/footer";
+import Navbar from "@/components/navbar";
+import { FaEnvelope, FaPhoneAlt, FaHeadset } from "react-icons/fa";
 
 const SupportPage = () => {
   return (
     <>
     <Navbar></Navbar>
-    <div className='bgsupport'>
+    <div className="bgsupport">
     <div className="container py-5">
       <h1 className="text-center text-warning mb-5">Support Client</h1>
 
@@ -40,9 +40,9 @@ const SupportPage = () => {
           <div className="card bg-dark text-light h-100">
             <div className="card-body">
               <h5 className="card-title d-flex align-items-center">
-                <FaPhoneAlt className="me-2 text-warning" /> Numéro d'urgence
+                <FaPhoneAlt className="me-2 text-warning" /> Numéro d&#39;urgence
               </h5>
-              <p className="card-text mt-3">Contactez-nous immédiatement en cas d'urgence :</p>
+              <p className="card-text mt-3">Contactez-nous immédiatement en cas d&#39;urgence :</p>
               <p className="fw-bold text-warning">+33 1 98 76 54 32</p>
             </div>
           </div>

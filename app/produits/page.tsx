@@ -6,6 +6,8 @@ import { Container, Row, Col, Card, Button, Modal, Form } from "react-bootstrap"
 import { FaHeart, FaStar } from "react-icons/fa";
 import { FaRegStarHalfStroke } from "react-icons/fa6";
 import { ProductType } from "@/type";
+import Footer from "@/components/footer";
+import Navbar from "@/components/navbar";
 
 export const ProductList = () => {
   const [products, setProducts] = useState<ProductType[]>([]);
@@ -18,7 +20,7 @@ export const ProductList = () => {
 
   const getProduit = async () => {
     try {
-      const req = await fetch('/api/getproduit', { method: 'get', headers: { "Content-type": "application/json" } });
+      const req = await fetch("/api/getproduit", { method: "get", headers: { "Content-type": "application/json" } });
       const res = await req.json();
       setProducts(res);
       setLoad(false);
@@ -41,8 +43,12 @@ export const ProductList = () => {
     localStorage.setItem("cart", JSON.stringify(updatedCart));
   };
 
+  function toggleLike(arg0: string): void {
+    throw new Error("Function not implemented.");
+  }
+
   return (
-    <Container fluid className="mt-4">
+    <><Navbar /><Container fluid className="mt-4">
       <Row>
         <Col md={3} className="bg-white p-4 shadow-sm rounded border">
           <h4 className="mb-3 text-dark fw-bold">Filtrer par Catégorie</h4>
@@ -74,9 +80,8 @@ export const ProductList = () => {
                           </div>
                           <FaHeart
                             className={`heart-icon ${likedProducts[String(product.id)] ? "liked" : ""}`}
-                            onClick={() => setLikedProducts((prev) => ({ ...prev, [product.id]: !prev[product.id] }))}
-                            style={{ cursor: "pointer", color: likedProducts[String(product.id)] ? "red" : "gray" }}
-                          />
+                            onClick={() => toggleLike(String(product.id))}
+                            style={{ cursor: "pointer", color: likedProducts[String(product.id)] ? "red" : "gray" }} />
                         </div>
                         <h5 className="text-success fw-bold mt-2">{product.prix} Fcfa</h5>
                         <Button variant="warning" className="w-100 rounded-pill fw-bold" onClick={() => addToCart(product)}>
@@ -121,6 +126,8 @@ export const ProductList = () => {
         </Modal>
       )}
     </Container>
+    <Footer/>
+    </>
   );
 };
 

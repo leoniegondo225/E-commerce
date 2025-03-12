@@ -18,7 +18,7 @@ export const ProductList = ({setPanier}: ProductType) => {
   const addProduit = async (data: ProductType) =>  {
     const req = await fetch('/api/addproduit', {
       headers: { "Content-type": "application/json" },
-      method: 'post',
+      method: "post",
       body: JSON.stringify(data)
     });
     const res = await req.json();
@@ -31,7 +31,7 @@ export const ProductList = ({setPanier}: ProductType) => {
     try {
       const req = await fetch('/api/getproduit', {
         headers: { "Content-type": "application/json" },
-        method: 'get',
+        method: "get",
       });
       const res = await req.json();
       console.log(res);
@@ -42,7 +42,7 @@ export const ProductList = ({setPanier}: ProductType) => {
     }
   };
 
-  // Toggle "J'aime" un produit
+  // Toggle "J&#39aime" un produit
   const toggleLike = (productId: string) => {
     setLikedProducts((prevState) => ({
       ...prevState,

@@ -19,6 +19,6 @@ export const POST = async ( req: Request) =>{
     
     } catch (error) {
         console.log(error)
-        return NextResponse.json("une erreur s'est produite")
+        return NextResponse.json("une erreur s&#39;est produite")
     }
 }

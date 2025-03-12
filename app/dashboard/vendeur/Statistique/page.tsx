@@ -65,29 +65,29 @@ export default function DashboardAnalytics() {
   <Grid.Col span={{ base: 12, md: 4 }}>
     <Card shadow="sm" padding="lg">
       <Title order={4}>Total Ventes</Title>
-      <Text size="xl" sx={{ color: "blue" }}>{totalVentes} Fcfa</Text>
+      <Text size="xl" style={{ color: "blue" }}>{totalVentes} Fcfa</Text>
     </Card>
   </Grid.Col>
   <Grid.Col span={{ base: 12, md: 4 }}>
     <Card shadow="sm" padding="lg">
       <Title order={4}>Total Clients</Title>
-      <Text size="xl" sx={{ color: "green" }}>{totalClients}</Text>
+      <Text size="xl" style={{ color: "green" }}>{totalClients}</Text>
     </Card>
   </Grid.Col>
   <Grid.Col span={{ base: 12, md: 4 }}>
     <Card shadow="sm" padding="lg">
       <Title order={4}>Total Commandes</Title>
-      <Text size="xl" sx={{ color: "orange" }}>{totalCommandes}</Text>
+      <Text size="xl" style={{ color: "orange" }}>{totalCommandes}</Text>
     </Card>
   </Grid.Col>
 </Grid>
 
       {/* 📌 SECTION GRAPHIQUES */}
       <Grid mt="xl">
-        {/* 🔹 CHIFFRE D'AFFAIRES */}
+        {/* 🔹 CHIFFRE D&#39;AFFAIRES */}
         <Grid.Col span={{ base: 12, md: 6 }}>
           <Card shadow="md" padding="lg">
-            <Title order={4}>Chiffre d'Affaires Mensuel</Title>
+            <Title order={4}>Chiffre d&#39;Affaires Mensuel</Title>
             <ResponsiveContainer width="100%" height={300}>
               <BarChart data={salesData}>
                 <XAxis dataKey="mois" />

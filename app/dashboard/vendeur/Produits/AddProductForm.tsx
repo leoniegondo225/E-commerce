@@ -1,14 +1,12 @@
 "use client"
-import React, { useEffect, useState } from 'react'
-import { Card, Select, Text } from '@mantine/core'
-import { Dropzone, MIME_TYPES } from '@mantine/dropzone';
-import { useRef } from 'react';
-import { Button, Group } from '@mantine/core';
-import { IconPhoto, IconUpload, IconBrandTelegram } from '@tabler/icons-react';
+import React, { useEffect, useState } from "react"
+import { Card, Text } from "@mantine/core"
+import { useRef } from "react";
+import { IconPhoto, IconUpload, IconBrandTelegram } from "@tabler/icons-react";
 import "../NavbarSimpleColored.module.css"
 import { FileUploaderRegular } from "@uploadcare/react-uploader/next";
 import "@uploadcare/react-uploader/core.css";
-import { OutputCollectionState, OutputCollectionStatus } from '@uploadcare/react-uploader';
+import { OutputCollectionState, OutputCollectionStatus } from "@uploadcare/react-uploader";
 
 
 
@@ -44,7 +42,7 @@ function AddProductForm() {
         if (user) {
             console.log("user connecté")
         } else {
-            console.log("Veillez vous connecter d'abord")
+            console.log("Veillez vous connecter d&#39;abord")
             return
         }
     }
@@ -86,13 +84,13 @@ function AddProductForm() {
     }
 
     return (
-        <div className='container-fluid'>
-            <form className='py-4' onSubmit={(e) => submitForm(e)}>
+        <div className="container-fluid">
+            <form className="py-4" onSubmit={(e) => submitForm(e)}>
                 <div className="row mt-4 justify-content-between">
                     <div className="col-lg-7">
                         <Card shadow="sm" padding="lg" radius="md" withBorder >
-                            <h4 className='ms-2'>Informations basic </h4>
-                            <Card.Section className='p-4'>
+                            <h4 className="ms-2">Informations basic </h4>
+                            <Card.Section className="p-4">
                                 <div className="col-lg-12 mb-4">
                                     <label htmlFor="produit" className="form-label">Nom du produit</label>
                                     <input type="text" className="form-control p-2" id="produit" placeholder="Entrer le nom du produit" onChange={(e) => setNomProduit(e.target.value)} />
@@ -113,7 +111,7 @@ function AddProductForm() {
                             <Card.Section className="card-body d-flex justify-content-center align-items-center flex-column">
                             <IconPhoto size={50} />
                             <FileUploaderRegular onChange={(e)=>recupimage(e)} pubkey="b20e70555b92917523f6" />
-                                <Text size="sm" c="dimmed" className='mb-3' inline mt={7}>
+                                <Text size="sm" c="dimmed" className="mb-3" inline mt={7}>
                                     Ajoutez autant de fichiers que vous le souhaitez, chaque fichier ne doit pas dépasser 5 Mo.
                                 </Text>
                             </Card.Section>
@@ -124,7 +122,7 @@ function AddProductForm() {
                     <div className="col-lg-6">
                         <Card shadow="sm" padding="lg" radius="md" withBorder>
                             <h4>Information sur prix du produit</h4>
-                            <Card.Section className='p-4'>
+                            <Card.Section className="p-4">
                                 <div className="row justify-content-center">
                                     <div className="col-lg-6 mb-3">
                                         <label htmlFor="prix" className="form-label">Prix unitaire</label>
@@ -154,7 +152,7 @@ function AddProductForm() {
                     <div className="col-lg-6">
                         <Card shadow="sm" padding="lg" radius="md" withBorder>
                             <h4>Information complémentaire</h4>
-                            <Card.Section className='p-4'>
+                            <Card.Section className="p-4">
                                 <div className="row justify-content-center">
                                     <div className="col-lg-12 mb-3  ">
                                         <select className="form-select p-2 mt-4" aria-label="Default select example" >
@@ -180,14 +178,14 @@ function AddProductForm() {
                 <div className="row text-center mt-5 ">
                     {
                         !load ? (
-                            <button type="submit" className='btn btn-info w-25 text-light mx-auto fw-bold' onClick={() => add()} >Ajouter un produit <IconBrandTelegram size={28} /></button>
+                            <button type="submit" className="btn btn-info w-25 text-light mx-auto fw-bold" onClick={() => add()} >Ajouter un produit <IconBrandTelegram size={28} /></button>
                         ) : (
-                            <button type="submit" className='btn btn-info w-25 text-light mx-auto fw-bold' ><i className="fa fa-spin fa-spinner me-2"></i>Traitement encours ...</button>
+                            <button type="submit" className="btn btn-info w-25 text-light mx-auto fw-bold" ><i className="fa fa-spin fa-spinner me-2"></i>Traitement encours ...</button>
                         )
                     }
                 </div>
                 <div className="mt-2">
-                    {message && <p className='btn btn-succes text-white fw-bold'>{message}</p>}
+                    {message && <p className="btn btn-succes text-white fw-bold">{message}</p>}
                 </div>
             </form >
         </div >

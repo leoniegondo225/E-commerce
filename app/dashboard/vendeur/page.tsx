@@ -1,6 +1,6 @@
 "use client"; // Nécessaire pour Next.js App Router
 
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from "react";
 import {
   IconHome,
   IconReceipt2,
@@ -14,41 +14,41 @@ import {
   IconSettings,
   IconUserCircle,
   IconCreditCard
-} from '@tabler/icons-react';
-import { Group } from '@mantine/core';
+} from "@tabler/icons-react";
+import { Group } from "@mantine/core";
 import { PiPlantFill } from "react-icons/pi";
 
 // Importation des composants
 
 
-import classes from './NavbarSimpleColored.module.css';
+import classes from "./NavbarSimpleColored.module.css";
 
-import ProfilVendeur from './ProfilVendeur/page';
-import Home from './Home/page';
-import Commandes from './Commande/page';
-import Paiements from './Paiements/page';
-import Parametre from './Paramettre/page';
-import Messages from './Message/page';
-import Clients from './Client/page';
-import Statistques from './Statistique/page';
-import Produits from './Produits/page';
-import { SiLapce } from 'react-icons/si';
+import ProfilVendeur from "./ProfilVendeur/page";
+import Home from "./Home/page";
+import Commandes from "./Commande/page";
+import Paiements from "./Paiements/page";
+import Parametre from "./Paramettre/page";
+import Messages from "./Message/page";
+import Clients from "./Client/page";
+import Statistques from "./Statistique/page";
+import Produits from "./Produits/page";
+import { SiLapce } from "react-icons/si";
 
 // Tableau des liens avec des références aux composants
 const data = [
-  { component: Home, label: 'Tableau de bord', icon: IconHome },
-  { component: ProfilVendeur, label: 'Profil Utilisateur', icon: IconUserCircle },
-  { component: Produits, label: 'Gestion des Produits', icon: IconBox },
-  { component: Commandes, label: 'Commandes', icon: IconShoppingCart },
-  { component: Statistques, label: 'Statistiques  ', icon: IconChartBar },
-  { component: Clients, label: 'Gestion des Clients', icon: IconUsers },
-  { component: Messages, label: ' Messages & Notifications', icon: IconMessageCircle },
-  { component: Parametre, label: ' Paramètres', icon: IconSettings },
-  { component: Paiements, label: 'Paiements', icon: IconCreditCard }
+  { component: Home, label: "Tableau de bord", icon: IconHome },
+  { component: ProfilVendeur, label: "Profil Utilisateur", icon: IconUserCircle },
+  { component: Produits, label: "Gestion des Produits", icon: IconBox },
+  { component: Commandes, label: "Commandes", icon: IconShoppingCart },
+  { component: Statistques, label: "Statistiques  ", icon: IconChartBar },
+  { component: Clients, label: "Gestion des Clients", icon: IconUsers },
+  { component: Messages, label: " Messages & Notifications", icon: IconMessageCircle },
+  { component: Parametre, label: " Paramètres", icon: IconSettings },
+  { component: Paiements, label: "Paiements", icon: IconCreditCard }
 ];
 
 function NavbarSimpleColored() {
-  const [active, setActive] = useState('Tableau de bord');
+  const [active, setActive] = useState("Tableau de bord");
   const [activeComponent, setActiveComponent] = useState(<Home />); // ✅ Stocke directement un élément JSX
 
 
@@ -61,7 +61,7 @@ function NavbarSimpleColored() {
       onClick={(event) => {
         event.preventDefault();
         setActive(item.label);
-        setActiveComponent(<item.component />); // ✅ Stocke l'élément JSX
+        setActiveComponent(<item.component />); // ✅ Stocke l"élément JSX
       }}
     >
       <item.icon className={classes.linkIcon} stroke={1.5} />
@@ -77,7 +77,7 @@ function NavbarSimpleColored() {
           <Group className={classes.header} justify="space-between">
             <h4>
               <sub>Achi<span className="text-warning">Oni</span></sub>
-              <SiLapce className='me-2' />
+              <SiLapce className="me-2" />
             </h4>
           </Group>
           {links}

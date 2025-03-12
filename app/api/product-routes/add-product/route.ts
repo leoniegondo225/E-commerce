@@ -16,6 +16,6 @@ export const POST = async (req: Request) => {
         }
     } catch (error) {
         console.log(error)
-        return NextResponse.json("Erreur lors de la création d'un produit")
+        return NextResponse.json("Erreur lors de la création d&#39;un produit")
     }
 }

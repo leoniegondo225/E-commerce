@@ -4,7 +4,7 @@ import Footer from "@/components/footer";
 import Navbar from "@/components/navbar";
 import { useState } from "react";
 import { FaUser, FaEnvelope, FaPaperPlane, FaCommentDots, FaPhoneAlt, FaStore } from "react-icons/fa";
-import { ImSpinner } from "react-icons/im";
+
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -43,7 +43,7 @@ const Contact = () => {
             <div className="text-center mb-4">
               <FaStore className="text-warning mb-3" size={50} />
               <h2 className="fw-bold">Nous Contacter</h2>
-              <p className="text-muted">Une question ? Besoin d'aide ? Contactez-nous !</p>
+              <p className="text-muted">Une question ? Besoin d&#39;aide ? Contactez-nous !</p>
             </div>
 
             <form onSubmit={handleSubmit} className="needs-validation" noValidate>
@@ -87,7 +87,7 @@ const Contact = () => {
                 <textarea
                   name="message"
                   className="form-control"
-                  rows="4"
+                  rows={4}
                   placeholder="Votre message"
                   value={formData.message}
                   onChange={handleChange}

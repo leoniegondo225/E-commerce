@@ -25,7 +25,7 @@ function GoogleLogin() {
               nom: info.user.displayName,
               photo: info.user.photoURL
             }))
-            redirecte.push('/dashboard')
+            redirecte.push("/dashboard")
         } 
     }
 

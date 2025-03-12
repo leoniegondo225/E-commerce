@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import ProductModal from './promodal';
+import React, { useState } from "react";
+import ProductModal from "./promodal";
 
 type Product = {
   id: number;
@@ -10,8 +10,8 @@ type Product = {
 };
 
 const products: Product[] = [
-  { id: 1, name: 'Produit 1', description: 'Description 1', price: 100, quantity: 10 },
-  { id: 2, name: 'Produit 2', description: 'Description 2', price: 200, quantity: 5 },
+  { id: 1, name: "Produit 1", description: "Description 1", price: 100, quantity: 10 },
+  { id: 2, name: "Produit 2", description: "Description 2", price: 200, quantity: 5 },
   // Ajoute plus de produits ici
 ];
 

@@ -3,7 +3,7 @@
 import GoogleLogin from "@/components/googleLogin";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react"
-import { Toast } from 'primereact/toast';
+import { Toast } from "primereact/toast";
 
 
 
@@ -156,7 +156,7 @@ function Vendeur() {
                                         </div><div className="form-floating mb-2 col-lg-12">
 
                                             <input type="text" name="typearticle" className="form-control" id="typearticle" placeholder="typearticle" required onChange={(e) => setTypearticle(e.target.value)} />
-                                            <label htmlFor="tel">Type d'article</label>
+                                            <label htmlFor="tel">Type d&#39;article</label>
                                         </div>
                                         <div className="form-floating mb-2 col-lg-12">
 
@@ -173,12 +173,12 @@ function Vendeur() {
                                             !load ? (
                                                 <div className="mb-3">
                                                     <button className="btn btn-primary w-100 text-center col-lg-12" type="submit" >
-                                                        S'inscrire
+                                                        S&#39;inscrire
                                                     </button>
                                                 </div>
                                             ) : (
                                                 <div className="col-lg-12 mb-3">
-                                                    <p className='fw-bold text-center p-2 btn btn-outline-primary form-control h5'>
+                                                    <p className="fw-bold text-center p-2 btn btn-outline-primary form-control h5">
                                                         <i className=" fas fa-spinner fa-spin me-2 "></i>
                                                         Veillez patienter quelque instants !</p>
                                                 </div>

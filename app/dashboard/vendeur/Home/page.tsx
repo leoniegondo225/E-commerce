@@ -1,9 +1,9 @@
 "use client"
-import React from 'react'
+import React from "react"
 
 function Home() {
     return (
-        <div className='bg-danger'>page accueil vendeur</div>
+        <div className="bg-danger">page accueil vendeur</div>
     )
 }
 

@@ -1,11 +1,11 @@
 // Import Swiper React components
-import { Swiper, SwiperSlide } from 'swiper/react';
+import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-import 'swiper/css/scrollbar';
-import { A11y, Autoplay, Navigation, Pagination, Scrollbar } from 'swiper/modules';
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/scrollbar";
+import { A11y, Autoplay, Navigation, Pagination, Scrollbar } from "swiper/modules";
 
 export const HeroSection = () => {
 
@@ -44,7 +44,7 @@ export const HeroSection = () => {
 
 
     return (
-        <div className='w-100'>
+        <div className="w-100">
             {pub && pub.length > 0 && (
                  <Swiper
                  modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
@@ -52,7 +52,7 @@ export const HeroSection = () => {
                  pagination={{ clickable: true }}
                  spaceBetween={20}
                  slidesPerView= {1}
-                 effect='fade'
+                 effect="fade"
                  speed= {1000}
                  autoplay= { {delay: 1000 }}
                  loop={true}

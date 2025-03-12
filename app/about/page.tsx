@@ -1,6 +1,6 @@
 "use client";
 
-import { FaStore, FaUsers, FaPlay, FaHistory, FaHandshake } from "react-icons/fa";
+import { FaUsers, FaHistory, FaHandshake } from "react-icons/fa";
 import Image from "next/image";
 import { useEffect, useRef } from "react";
 import Link from "next/link";

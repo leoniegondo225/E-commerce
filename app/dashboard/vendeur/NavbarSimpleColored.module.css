@@ -1,7 +1,7 @@
 /* Navbar style */
 .navbar {
     height: 100vh;
-    /* Prend toute la hauteur de l'écran */
+    /* Prend toute la hauteur de l&#39;écran */
     width: 300px;
     /* Largeur fixe de la navbar */
     padding: var(--mantine-spacing-md);
@@ -79,7 +79,7 @@
 /* Section de contenu */
 .content {
     margin-left: 300px;
-    /* Laisse de l'espace pour la navbar fixe */
+    /* Laisse de l&#39;espace pour la navbar fixe */
     padding: 20px;
     height: 100vh;
     background-color: var(--mantine-color-gray-0);
@@ -87,7 +87,7 @@
     /* Permet le scroll dans la section du contenu */
 }
 
-/* Responsive : Si l'écran est plus petit, réduire la largeur de la navbar */
+/* Responsive : Si l&#39;écran est plus petit, réduire la largeur de la navbar */
 @media (max-width: 768px) {
     .navbar {
         width: 240px;
@@ -96,7 +96,7 @@
 
     .content {
         margin-left: 240px;
-        /* Adapte l'espace pour la navbar plus petite */
+        /* Adapte l&#39;espace pour la navbar plus petite */
     }
 }
 

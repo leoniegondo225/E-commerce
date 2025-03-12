@@ -6,7 +6,7 @@ import Image from "next/image";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
-import { CartItem, ProductType } from "@/type";
+import { ProductType } from "@/type";
 
 
 
@@ -35,9 +35,9 @@ const CartPage = () => {
       }
     } catch (error) {
       console.error("Erreur de parsing du panier :", error);
-      setCartItems([]); // Réinitialiser en cas d'erreur
+      setCartItems([]); // Réinitialiser en cas d&#39erreur
     }
-  }, []);
+  }, [cartItems]);
 
   useEffect(() => {
     const totalItems = cartItems.reduce((acc, item) => acc + item.quantite!, 0);
@@ -170,7 +170,7 @@ const CartPage = () => {
             </div>
             <div className="modal-body">
               <p>Veuillez vous inscrire ou vous connecter pour passer une commande.</p>
-              <button className="btn btn-primary w-100" onClick={() => router.push("/signup")}>S'inscrire</button>
+              <button className="btn btn-primary w-100" onClick={() => router.push("/signup")}>S&#39inscrire</button>
               <button className="btn btn-secondary w-100 mt-2" onClick={() => router.push("/login")}>Se connecter</button>
             </div>
           </div>

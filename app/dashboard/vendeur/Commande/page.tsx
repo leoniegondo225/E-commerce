@@ -1,6 +1,6 @@
 "use client"
-import React, { useState, useEffect } from 'react';
-import { Card, Table, Title, Text, Badge, Button, Loader, Grid } from '@mantine/core';
+import React, { useState, useEffect } from "react";
+import { Card, Table, Title, Text, Badge, Button, Loader, Grid } from "@mantine/core";
 
 // Interface pour une commande
 interface Commande {

@@ -102,7 +102,7 @@ const Footer = () => {
         
         <div className= "col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
           <h6 className= "text-uppercase fw-bold mb-4 text-warning">Contact</h6>
-          <p><FaHome className="me-3 text-warning" /> Abidjan, Cocody, Côte d'Ivoire</p>
+          <p><FaHome className="me-3 text-warning" /> Abidjan, Cocody, Côte d&#39Ivoire</p>
           <p>
           <FaEnvelope className="me-3 text-warning" />
             achioni@gmail.com
