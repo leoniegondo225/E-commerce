@@ -17,7 +17,7 @@ import {
 import { IconUser, IconLock, IconBell, IconSettings } from "@tabler/icons-react";
 
 export default function ParametresPage() {
-  const [darkMode, setDarkMode] = useState(false);
+  const [, setDarkMode] = useState(false);
   const sessions = [
     { id: 1, device: "Chrome - Windows", ip: "192.168.1.1", date: "25/02/2025" },
     { id: 2, device: "Safari - iPhone", ip: "203.0.113.42", date: "24/02/2025" },

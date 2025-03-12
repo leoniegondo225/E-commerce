@@ -2,7 +2,7 @@
 
 import GoogleLogin from "@/components/googleLogin";
 import Link from "next/link";
-import { useEffect, useRef, useState } from "react"
+import { useRef, useState } from "react"
 import { Toast } from "primereact/toast";
 
 
@@ -21,11 +21,9 @@ function Vendeur() {
     const [typearticle, setTypearticle] = useState("")
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
-    const [message, setMessage] = useState("");
     const [load, setLoad] = useState(false)
     const submitForm = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault()
-        setMessage("")
         setLoad(true)
         try {
             const data = {

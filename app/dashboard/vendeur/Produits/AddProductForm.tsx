@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react"
 import { Card, Text } from "@mantine/core"
 import { useRef } from "react";
-import { IconPhoto, IconUpload, IconBrandTelegram } from "@tabler/icons-react";
+import { IconPhoto, IconBrandTelegram } from "@tabler/icons-react";
 import "../NavbarSimpleColored.module.css"
 import { FileUploaderRegular } from "@uploadcare/react-uploader/next";
 import "@uploadcare/react-uploader/core.css";
@@ -12,9 +12,7 @@ import { OutputCollectionState, OutputCollectionStatus } from "@uploadcare/react
 
 
 function AddProductForm() {
-    const openRef = useRef<() => void>(null);
-    const [categoryProduct, setCategoryProduct] = useState("")
-    const [selectedProduct, setSelectedProduct] = useState("")
+
     const [codeProduit, setCodeProduit] = useState("")
     const [nomProduit, setNomProduit] = useState("")
     const [descriptionProduit, setDescriptionProduit] = useState("")
@@ -23,11 +21,11 @@ function AddProductForm() {
     const [devise, setDevise] = useState("")
     const [qte, setQte] = useState("")
     const [date, setDate] = useState("")
-    const [lieu, setLieu] = useState("")
+    const [, setLieu] = useState("")
     const [load, setLoad] = useState(false)
     const [message, setMessage] = useState("")
 
-    const [user, setUser] = useState(localStorage.getItem("usersInfos")) || null
+    const [user] = useState(localStorage.getItem("usersInfos")) || null
 
     const[files,setFiles]= useState("")
 

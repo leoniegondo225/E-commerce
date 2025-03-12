@@ -15,16 +15,6 @@ export const ProductList = ({setPanier}: ProductType) => {
   const [likedProducts, setLikedProducts] = useState<{ [key: string]: boolean }>({});
 
   //Ajouter un produit
-  const addProduit = async (data: ProductType) =>  {
-    const req = await fetch('/api/addproduit', {
-      headers: { "Content-type": "application/json" },
-      method: "post",
-      body: JSON.stringify(data)
-    });
-    const res = await req.json();
-    if (res === "ok") console.log("Article ajouté");
-    else console.log(res);
-  };
 
   //Récupération des produits
   const getProduit = async () => {

@@ -2,8 +2,8 @@
 import React from "react"
 import { useRef } from "react";
 import { Button, Group, Card } from "@mantine/core";
-import { Dropzone, MIME_TYPES } from "@mantine/dropzone";
-import { IconPhone, IconPhoto, IconUpload } from "@tabler/icons-react";
+import { Dropzone } from "@mantine/dropzone";
+import { IconPhoto, IconUpload } from "@tabler/icons-react";
 
 function FormProfilVendeur() {
     const openRef = useRef<() => void>(null);

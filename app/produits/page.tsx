@@ -14,7 +14,7 @@ export const ProductList = () => {
   const [selectedProduct, setSelectedProduct] = useState<ProductType | null>(null);
   const [cart, setCart] = useState<ProductType[]>([]);
   const [load, setLoad] = useState(true);
-  const [likedProducts, setLikedProducts] = useState<{ [key: string]: boolean }>({});
+  const [likedProducts] = useState<{ [key: string]: boolean }>({});
   const [categories] = useState<string[]>(["all", "Téléphones", "Ordinateurs", "Accessoires", "Électroménagers"]);
   const [selectedCategory, setSelectedCategory] = useState<string>("all");
 
@@ -43,7 +43,7 @@ export const ProductList = () => {
     localStorage.setItem("cart", JSON.stringify(updatedCart));
   };
 
-  function toggleLike(arg0: string): void {
+  function toggleLike(_arg0: string): void {
     throw new Error("Function not implemented.");
   }
 

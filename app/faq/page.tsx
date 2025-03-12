@@ -1,15 +1,11 @@
 "use client"
 import { FaQuestionCircle, FaCreditCard, FaTruck, FaPencilAlt, FaDollarSign, FaClock, FaUndo } from "react-icons/fa";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { useEffect } from "react";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 
 
 const FAQPage = () => {
-  useEffect(() => {
-   
-  }, []);
   
 
   return (

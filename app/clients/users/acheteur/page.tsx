@@ -17,11 +17,10 @@ function Inscription() {
     const [tel, setTel] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
-    const [message, setMessage] = useState("");
+    
 const [load, setLoad]= useState(false)
     const submitForm = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault()
-        setMessage("")
         setLoad(true)
         try {
             const data = {

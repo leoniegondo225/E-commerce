@@ -3,19 +3,19 @@ import GoogleLogin from "@/components/googleLogin"
 import Link from "next/link"
 import { Toast } from "primereact/toast";
 import { useRef, useState } from "react"
-import Image from 'next/image'
+
 
 
 function Login() {
     const toast = useRef<Toast>(null);
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
-    const [message, setMessage] = useState("")
+   
 
 
     const submitForm = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault()
-        setMessage("")
+        
         try {
             const req = await fetch("/api/login", {
                 headers: { "content-type": "application/json" },
@@ -25,7 +25,6 @@ function Login() {
             const res = await req.json()
             console.log(res)
             if (res && res.data) {
-                setMessage("utilisateur créer avec succès")
                 console.log(res.data)
                 toast.current?.show({
                     severity: "success",

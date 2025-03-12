@@ -1,9 +1,9 @@
 "use client"; // Nécessaire pour Next.js App Router
 
-import { useEffect, useState } from "react";
+import {  useState } from "react";
 import {
   IconHome,
-  IconReceipt2,
+  
   IconLogout,
   IconSwitchHorizontal,
   IconShoppingCart,
@@ -16,7 +16,7 @@ import {
   IconCreditCard
 } from "@tabler/icons-react";
 import { Group } from "@mantine/core";
-import { PiPlantFill } from "react-icons/pi";
+
 
 // Importation des composants
 

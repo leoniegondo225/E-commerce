@@ -42,7 +42,7 @@ const CartPage = () => {
   }, []);
 
   useEffect(() => {
-    const totalItems = cartItems.reduce((acc, item) => acc + item.quantite!, 0);
+    const totalItems = cartItems.reduce((acc, item) => acc + (item.quantite ?? 0), 0);
     setCartCount(totalItems);
   }, [cartItems]);
 
@@ -124,11 +124,11 @@ const CartPage = () => {
                       <h5 className="fw-bold mb-2 text-primary text-uppercase">{item?.nomProduit}</h5>
                       <p className="text-muted mb-2">Prix: Fcfa {Number(item?.prix).toFixed(2) || "N/A"}</p>
                       <div className="d-flex align-items-center gap-3">
-                        <button className="btn btn-outline-primary btn-sm" onClick={() => decrementQuantity(Number(item?.id!))}>
+                        <button className="btn btn-outline-primary btn-sm" onClick={() => decrementQuantity(Number(item?.id))}>
                           <FaMinus />
                         </button>
                         <span className="fw-bold px-3 py-1 bg-light border rounded text-dark shadow-sm">{item?.quantite}</span>
-                        <button className="btn btn-outline-primary btn-sm" onClick={() => incrementQuantity(Number(item?.id!))}>
+                        <button className="btn btn-outline-primary btn-sm" onClick={() => incrementQuantity(Number(item?.id))}>
                           <FaPlus />
                         </button>
                         <button className="btn btn-outline-danger btn-sm ms-auto" onClick={() => removeItem(Number(item?.id!))}>
