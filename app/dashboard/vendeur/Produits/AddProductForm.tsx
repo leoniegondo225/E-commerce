@@ -30,8 +30,9 @@ function AddProductForm() {
     const[files,setFiles]= useState("")
 
     const recupimage=(e:OutputCollectionState<OutputCollectionStatus, "maybe-has-group">)=>{
-        if(e.allEntries[0].uuid){
-            setFiles(e.allEntries[0]?.cdnUrl!)
+        const firstEntry = e.allEntries[0]; 
+        if (firstEntry && firstEntry.cdnUrl) {
+            setFiles(firstEntry.cdnUrl);
         }
     }
 
