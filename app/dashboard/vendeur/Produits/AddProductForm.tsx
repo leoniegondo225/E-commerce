@@ -1,7 +1,7 @@
 "use client"
 import React, { useEffect, useState } from "react"
 import { Card, Text } from "@mantine/core"
-import { useRef } from "react";
+
 import { IconPhoto, IconBrandTelegram } from "@tabler/icons-react";
 import "../NavbarSimpleColored.module.css"
 import { FileUploaderRegular } from "@uploadcare/react-uploader/next";

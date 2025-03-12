@@ -43,7 +43,7 @@ export const ProductList = () => {
     localStorage.setItem("cart", JSON.stringify(updatedCart));
   };
 
-  function toggleLike(_arg0: string): void {
+  function toggleLike(arg: string): void {
     throw new Error("Function not implemented.");
   }
 

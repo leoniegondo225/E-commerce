@@ -3,6 +3,7 @@ import GoogleLogin from "@/components/googleLogin"
 import Link from "next/link"
 import { Toast } from "primereact/toast";
 import { useRef, useState } from "react"
+import Image from 'next/image';
 
 
 
@@ -58,7 +59,7 @@ function Login() {
             <div className="container py-5 ">
                 <div className="row align-items-center justify-content-center log rounded-4 ">
                     <div className="col-lg-7">
-                        <img src="/img/3.jpg" alt="" className="img-fluid" />
+                        <Image src="/img/3.jpg" alt="" className="img-fluid" />
                     </div>
                     <div className="col-lg-5">
                         <h1>Connexion</h1>
