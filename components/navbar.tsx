@@ -58,7 +58,7 @@ const NavigationBar = ({panier}: ProductType) => {
         <Navbar.Collapse id="basic-navbar-nav" className="text-warning fw-bold">
           <Nav className="me-auto text-warning">
             <Nav.Link href="/accueil">Accueil</Nav.Link>
-            <Nav.Link href="/produits">Produits</Nav.Link>
+            <Nav.Link href="#">Produits</Nav.Link>
             <Nav.Link href="/contact">Contact</Nav.Link>
           </Nav>
 
@@ -85,13 +85,13 @@ const NavigationBar = ({panier}: ProductType) => {
             </Nav.Link>
 
 
-            <Nav.Link href="/panier" className="mx-3 position-relative">
+            {panier && <Nav.Link href="/panier" className="mx-3 position-relative">
               <TiShoppingCart size={22} />
               <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                {panier!.length}
+                {panier?.length}
                 <span className="visually-hidden">unread messages</span>
               </span>
-            </Nav.Link>
+            </Nav.Link>}
 
             {/* Boutons d"inscription et connexion */}
             <Nav.Link 

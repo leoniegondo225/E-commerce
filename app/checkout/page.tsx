@@ -2,7 +2,7 @@
 
 import Footer from "@/components/footer";
 import Navbar from "@/components/navbar";
-import { CartItem } from "@/type";
+import { ProductType } from "@/type";
 import { useState, useEffect } from "react";
 import { Container, Row, Col, Form, Button, Card } from "react-bootstrap";
 
@@ -19,15 +19,15 @@ const CheckoutPage = () => {
     promoCode: "",
   });
 
-  const [discount,] = useState(0);
-  const [cartItems, setCartItems] = useState<CartItem[]>([]);
+  const [cartItems, setCartItems] = useState<ProductType[]>([]);
 
   useEffect(() => {
     const storedCart = localStorage.getItem("cart");
     if (storedCart) {
       try {
         const parsedCart = JSON.parse(storedCart);
-        setCartItems(Array.isArray(parsedCart) ? parsedCart : []);
+        console.log(parsedCart)
+        setCartItems(parsedCart);
       } catch (error) {
         console.error("Erreur de parsing du panier :", error);
         setCartItems([]);
@@ -36,11 +36,13 @@ const CheckoutPage = () => {
   }, []);
 
   const calculateTotal = () => {
-    const subtotal = cartItems.reduce(
-      (acc, item) => acc + (item.prix ? item.prix * item.qte! : 0),
-      0
-    );
-    return (subtotal - (subtotal * discount) / 100).toFixed(2);
+    let total = 0
+    if (cartItems.length > 0) {
+      cartItems.forEach((index: ProductType) => {
+        total +=Number(index?.prix)
+      })
+    }
+    return total;
   };
 
   const handleSubmit = (e: { preventDefault: () => void }) => {
@@ -51,7 +53,7 @@ const CheckoutPage = () => {
 
   return (
     <>
-      <Navbar />
+     <Navbar panier={cartItems} />
       <div className="bgcheckout">
         <Container className="my-5">
           <Row>
@@ -61,10 +63,10 @@ const CheckoutPage = () => {
                 cartItems.map((item) => (
                   <Card key={item.id} className="mb-3">
                     <Card.Body>
-                      <Card.Title>{item.name}</Card.Title>
-                      <Card.Text>Quantité : {item.quantity}</Card.Text>
+                      <Card.Title>{item.nomProduit}</Card.Title>
+                      <Card.Text>Quantité : {item?.quantite}</Card.Text>
                       <Card.Text>
-                        Prix : {item.price ? `${item.price.toFixed(2)} Fcfa` : "Prix indisponible"}
+                        Prix : {item.prix ? `${item?.prix} Fcfa` : "Prix indisponible"}
                       </Card.Text>
                     </Card.Body>
                   </Card>

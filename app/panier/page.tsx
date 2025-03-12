@@ -87,6 +87,7 @@ const CartPage = () => {
   };
 
   const handleCheckout = () => {
+    return  router.push("/checkout");
     const user = UserLogin();
     if (!user) {
       // If no user is logged in, show the modal
@@ -107,7 +108,7 @@ const CartPage = () => {
         </h1>
         <div className="row">
           <div className="col-md-8">
-            {cartItems.length > 0 ? (
+            {cartItems.length> 0 ? (
               cartItems.map((item, index) => (
                 <div key={index} className="card mb-4 shadow-lg border-0 rounded-4 p-3 bg-white bg-opacity-75 backdrop-blur">
                   <div className="row g-0 align-items-center">

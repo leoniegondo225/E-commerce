@@ -7,6 +7,7 @@ import "../NavbarSimpleColored.module.css"
 import { FileUploaderRegular } from "@uploadcare/react-uploader/next";
 import "@uploadcare/react-uploader/core.css";
 import { OutputCollectionState, OutputCollectionStatus } from "@uploadcare/react-uploader";
+import { Inputs } from "@/type";
 
 
 
@@ -25,7 +26,7 @@ function AddProductForm() {
     const [load, setLoad] = useState(false)
     const [message, setMessage] = useState("")
 
-    const [user] = useState(localStorage.getItem("usersInfos")) || null
+    const [user, setUsers] = useState<Inputs>()
 
     const[files,setFiles]= useState<string>("")
 
@@ -51,7 +52,8 @@ function AddProductForm() {
     }
 
     useEffect(() => {
-
+        const i = localStorage.getItem("users")
+        setUsers(JSON.parse(i!) || null)
     }, [])
 
     const submitForm = async (e: React.FormEvent<HTMLFormElement>) => {
