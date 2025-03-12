@@ -19,7 +19,7 @@ const CheckoutPage = () => {
     promoCode: "",
   });
 
-  const [discount, setDiscount] = useState(0);
+  const [discount,] = useState(0);
   const [cartItems, setCartItems] = useState<CartItem[]>([]);
 
   useEffect(() => {

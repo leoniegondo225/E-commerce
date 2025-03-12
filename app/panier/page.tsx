@@ -17,9 +17,11 @@ const CartPage = () => {
   const router = useRouter();
 
   const UserLogin = () => {
-    const storeUser = JSON.parse(localStorage.getItem("users")!);
-   
-    return storeUser; // We return the user to check login status
+    if (typeof window !== "undefined") {
+      const storeUser = localStorage.getItem("users");
+      return storeUser ? JSON.parse(storeUser) : null;
+    }
+    return null; // We return the user to check login status
   };
 
   useEffect(() => {
@@ -37,7 +39,7 @@ const CartPage = () => {
       console.error("Erreur de parsing du panier :", error);
       setCartItems([]); // Réinitialiser en cas d&#39erreur
     }
-  }, [cartItems]);
+  }, []);
 
   useEffect(() => {
     const totalItems = cartItems.reduce((acc, item) => acc + item.quantite!, 0);
@@ -52,8 +54,10 @@ const CartPage = () => {
 
   const incrementQuantity = (id: number) => {
     const item = cartItems.find(item => Number(item.id) === id)
-    item!.quantite! += 1
-    setCartItems([...cartItems])
+    if (item) {
+    item.quantite = (item.quantite || 0) + 1;
+    setCartItems([...cartItems]);
+  }
   };
 
   const decrementQuantity = (id: number) => {

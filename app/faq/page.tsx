@@ -8,10 +8,9 @@ import Footer from "@/components/footer";
 
 const FAQPage = () => {
   useEffect(() => {
-    if (typeof window !== "undefined") {
-      require("bootstrap/dist/js/bootstrap.bundle.min.js");
-    }
+   
   }, []);
+  
 
   return (
     <>
