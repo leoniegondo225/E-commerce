@@ -27,12 +27,16 @@ function AddProductForm() {
 
     const [user] = useState(localStorage.getItem("usersInfos")) || null
 
-    const[files,setFiles]= useState("")
+    const[files,setFiles]= useState<string>("")
 
     const recupimage=(e:OutputCollectionState<OutputCollectionStatus, "maybe-has-group">)=>{
-        const firstEntry = e.allEntries[0]; 
-        if (firstEntry && firstEntry.cdnUrl) {
-            setFiles(firstEntry.cdnUrl);
+        if (Array.isArray(e.allEntries) && e.allEntries.length > 0) {
+            const firstEntry = e.allEntries[0];
+            if (firstEntry?.cdnUrl) {
+                setFiles(firstEntry.cdnUrl);
+            }
+        } else {
+            console.warn("Aucune image sélectionnée ou e.allEntries est vide.");
         }
     }
 
