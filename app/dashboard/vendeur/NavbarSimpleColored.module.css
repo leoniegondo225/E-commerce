@@ -1,0 +1,115 @@
+/* Navbar style */
+.navbar {
+    height: 100vh;
+    /* Prend toute la hauteur de l'écran */
+    width: 300px;
+    /* Largeur fixe de la navbar */
+    padding: var(--mantine-spacing-md);
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid light-dark(var(--mantine-color-gray-3), var(--mantine-color-dark-4));
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    /* Pour que la navbar soit au-dessus du contenu */
+}
+
+.navbarMain {
+    flex: 1;
+    overflow-y: auto;
+    /* Permet de scroller si trop de liens */
+}
+
+.header {
+    padding-bottom: var(--mantine-spacing-md);
+    margin-bottom: calc(var(--mantine-spacing-md) * 1.5);
+    border-bottom: 1px solid light-dark(var(--mantine-color-gray-3), var(--mantine-color-dark-4));
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer {
+    padding-top: var(--mantine-spacing-md);
+    margin-top: var(--mantine-spacing-md);
+    border-top: 1px solid light-dark(var(--mantine-color-gray-3), var(--mantine-color-dark-4));
+}
+
+/* Styles de chaque lien */
+.link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-size: var(--mantine-font-size-sm);
+    color: light-dark(var(--mantine-color-gray-7), var(--mantine-color-dark-1));
+    padding: var(--mantine-spacing-xs) var(--mantine-spacing-sm);
+    border-radius: var(--mantine-radius-sm);
+    font-weight: 500;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+/* Hover pour les liens */
+.link:hover {
+    background-color: light-dark(var(--mantine-color-gray-0), var(--mantine-color-dark-6));
+    color: light-dark(var(--mantine-color-black), var(--mantine-color-white));
+}
+
+.link:hover .linkIcon {
+    color: light-dark(var(--mantine-color-black), var(--mantine-color-white));
+}
+
+/* Lien actif */
+.link[data-active] {
+    background-color: var(--mantine-color-blue-light);
+    color: var(--mantine-color-blue-light-color);
+}
+
+.link[data-active]:hover .linkIcon {
+    color: var(--mantine-color-blue-light-color);
+}
+
+.linkIcon {
+    color: light-dark(var(--mantine-color-gray-6), var(--mantine-color-dark-2));
+    margin-right: var(--mantine-spacing-sm);
+    width: 25px;
+    height: 25px;
+}
+
+/* Section de contenu */
+.content {
+    margin-left: 300px;
+    /* Laisse de l'espace pour la navbar fixe */
+    padding: 20px;
+    height: 100vh;
+    background-color: var(--mantine-color-gray-0);
+    overflow-y: auto;
+    /* Permet le scroll dans la section du contenu */
+}
+
+/* Responsive : Si l'écran est plus petit, réduire la largeur de la navbar */
+@media (max-width: 768px) {
+    .navbar {
+        width: 240px;
+        /* Réduit la largeur de la navbar sur mobile */
+    }
+
+    .content {
+        margin-left: 240px;
+        /* Adapte l'espace pour la navbar plus petite */
+    }
+}
+
+/* Styles supplémentaires pour améliorer la présentation */
+@media (max-width: 480px) {
+    .navbar {
+        width: 100%;
+        /* Navbar prend toute la largeur en mode mobile */
+        height: auto;
+    }
+
+    .content {
+        margin-left: 0;
+        /* Aucune marge à gauche sur mobile */
+    }
+}

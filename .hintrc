@@ -1,0 +1,49 @@
+{
+  "extends": [
+    "development"
+  ],
+  "hints": {
+    "axe/structure": [
+      "default",
+      {
+        "listitem": "off",
+        "list": "off"
+      }
+    ],
+    "axe/aria": [
+      "default",
+      {
+        "aria-command-name": "off",
+        "aria-valid-attr-value": "off"
+      }
+    ],
+    "no-inline-styles": "off",
+    "axe/name-role-value": [
+      "default",
+      {
+        "button-name": "off"
+      }
+    ],
+    "axe/forms": [
+      "default",
+      {
+        "select-name": "off",
+        "label": "off"
+      }
+    ],
+    "compat-api/css": [
+      "default",
+      {
+        "ignore": [
+          "border-right: 1px solid light-dark(var(--mantine-color-gray-3), var(--mantine-color-dark-4))",
+          "border-bottom: 1px solid light-dark(var(--mantine-color-gray-3), var(--mantine-color-dark-4))",
+          "border-top: 1px solid light-dark(var(--mantine-color-gray-3), var(--mantine-color-dark-4))",
+          "color: light-dark(var(--mantine-color-gray-7), var(--mantine-color-dark-1))",
+          "background-color: light-dark(var(--mantine-color-gray-0), var(--mantine-color-dark-6))",
+          "color: light-dark(var(--mantine-color-black), var(--mantine-color-white))",
+          "color: light-dark(var(--mantine-color-gray-6), var(--mantine-color-dark-2))"
+        ]
+      }
+    ]
+  }
+}
