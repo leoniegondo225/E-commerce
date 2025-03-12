@@ -3,6 +3,7 @@ import GoogleLogin from "@/components/googleLogin"
 import Link from "next/link"
 import { Toast } from "primereact/toast";
 import { useRef, useState } from "react"
+import Image from 'next/image'
 
 
 function Login() {

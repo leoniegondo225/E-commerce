@@ -58,7 +58,7 @@ export const ProductList = ({setPanier}: ProductType) => {
       setCart(panier);
       setPanier!(panier)
     }
-  }, []);
+  }, [setPanier]);
 
   const addToCart = (product: ProductType) => {
       // Si le produit est déjà dans le panier, on ne le met à jour

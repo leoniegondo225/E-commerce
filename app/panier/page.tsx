@@ -18,7 +18,7 @@ const CartPage = () => {
 
   const UserLogin = () => {
     const storeUser = JSON.parse(localStorage.getItem("users")!);
-    console.log(storeUser);
+   
     return storeUser; // We return the user to check login status
   };
 
@@ -28,7 +28,7 @@ const CartPage = () => {
       const storedCart = localStorage.getItem("cart");
       if (storedCart) {
         setCartItems(JSON.parse(storedCart));
-        console.log(JSON.parse(storedCart));
+        
       }
       if (!storedUser) {  // If no user is logged in
         setShowModal(true);  // Show the modal to ask for registration/login
