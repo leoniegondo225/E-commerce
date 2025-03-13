@@ -96,7 +96,7 @@ const NavigationBar = ({panier}: ProductType) => {
             {/* Boutons d"inscription et connexion */}
             <Nav.Link 
               href="/clients/users/acheteur" 
-              className="btn btn-outline-warning text-dark custom-btn p-2 ">S&#39inscrire
+              className="btn btn-outline-warning text-dark custom-btn p-2 ">S'inscrire
             </Nav.Link>
             <Nav.Link href="/clients/login" className="btn bg-warning text-light p-1 ms-3">Se connecter</Nav.Link>
           </div>

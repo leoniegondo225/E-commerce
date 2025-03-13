@@ -3,6 +3,7 @@
 import Footer from "@/components/footer";
 import Navbar from "@/components/navbar";
 import { ProductType } from "@/type";
+import Link from "next/link";
 import { useState, useEffect } from "react";
 import { Container, Row, Col, Form, Button, Card } from "react-bootstrap";
 
@@ -13,10 +14,7 @@ const CheckoutPage = () => {
     phone: "",
     address: "",
     city: "",
-    postalCode: "",
     country: "",
-    paymentMethod: "paypal",
-    promoCode: "",
   });
 
   const [cartItems, setCartItems] = useState<ProductType[]>([]);
@@ -124,34 +122,13 @@ const CheckoutPage = () => {
                   />
                 </Form.Group>
 
-                <Form.Group className="mb-3">
-                  <Form.Label>Moyen de paiement</Form.Label>
-                  <Form.Select
-                    name="paymentMethod"
-                    value={formData.paymentMethod}
-                    onChange={(e) => setFormData({ ...formData, paymentMethod: e.target.value })}
-                  >
-                    <option value="paypal">PayPal</option>
-                    <option value="mobile">Mobile</option>
-                    <option value="visa">Carte VISA</option>
-                    <option value="mastercard">Carte MasterCard</option>
-                    <option value="cash">Espèces</option>
-                  </Form.Select>
-                </Form.Group>
+                
 
-                <Form.Group className="mb-3">
-                  <Form.Label>Code promo</Form.Label>
-                  <Form.Control
-                    type="text"
-                    name="promoCode"
-                    value={formData.promoCode}
-                    onChange={(e) => setFormData({ ...formData, promoCode: e.target.value })}
-                  />
-                </Form.Group>
+                
 
-                <Button variant="warning" type="submit" className="w-100 text-light">
+                <Link href="http://wa.me/2250797636146"  target="_blank" rel="noopener noreferrer" type="submit" className="w-100 text-light btn btn-warning mb-4">
                   Valider la Commande
-                </Button>
+                </Link>
               </Form>
             </Col>
           </Row>
